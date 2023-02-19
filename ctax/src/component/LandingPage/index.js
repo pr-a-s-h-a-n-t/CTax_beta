@@ -1,9 +1,9 @@
 import React from 'react'
-
+import NavBar from "./NavBar";
 function LandingPage() {
   return (
     <div>
-            This is a    Landing Page 👽 !!!
+           <NavBar />
     </div>
   )
 }
