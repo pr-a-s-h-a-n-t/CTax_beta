@@ -12,10 +12,17 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
- 
+
 import { height } from "@mui/system";
 import "./NavBar.css";
-const pages = ["Products", "Pricing", "Blog"];
+const pages = [
+  "Business Registration",
+  "Consultation",
+  "Compliance",
+  "Trademark",
+  "Tax",
+  "GST",
+];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -38,28 +45,29 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar sx={{
-      backgroundColor:" white",
-      color: "black",
-    }}  position="static">
+    <AppBar
+      sx={{
+        backgroundColor: " white",
+        color: "black",
+      }}
+      position="static"
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-           
-           <Typography 
-           id="logo"
-           sx={{
-            display: { xs: 'none', md: 'flex' },
-            fontFamily: 'monospace',
+          <Typography
+            id="logo"
+            sx={{
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
               fontWeight: 700,
-             
-              color: 'inherit',
-              textDecoration: 'none',
-              fontSize:"40px",
- 
-           }}
-           >
+
+              color: "inherit",
+              textDecoration: "none",
+              fontSize: "40px",
+            }}
+          >
             CTax
-           </Typography>
+          </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -93,18 +101,49 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography 
-                  sx={{
-                    color: "red",
-                  }}
-                  textAlign="center">{page}</Typography>
+                  <Typography
+                    sx={{
+                      color: "red",
+                    }}
+                    textAlign="center"
+                  >
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
-          
-          
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{
+                  my: 2,
+                  color: "black",
+                  fontWeight: "bold",
+                  fontSize: "1.12rem",
+                  display: "block",
+                }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+          {/* <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "black", fontWeight: "bold",
+                fontSize:"1.12rem",  display: "block" }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box> */}
+          {/* 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
@@ -116,32 +155,7 @@ function ResponsiveAppBar() {
                 {page}
               </Button>
             ))}
-          </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", fontWeight: "bold",
-                fontSize:"1.12rem",  display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", fontWeight: "bold",
-                fontSize:"1.12rem",  display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
+          </Box> */}
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
