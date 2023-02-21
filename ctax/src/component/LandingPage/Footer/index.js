@@ -104,8 +104,7 @@ export default function Footer() {
             marginTop: "10px",
           }}
         >
-          © 2022 Butterfly Learnings, All Rights Reserved. by Bombay Autism
-          Services Pvt Ltd.
+          © 2023 CTax, All Rights Reserved. 
         </Typography>
       </Grid>
     </div>
