@@ -1,9 +1,13 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
-
+import { Grid, Typography   } from "@mui/material";
 import "./Footer.css";
+ 
+ 
 
 export default function Footer() {
+ 
+
+
   return (
     <div
       style={{
@@ -44,7 +48,7 @@ export default function Footer() {
             marginTop: "1rem",
             textAlign: "start",
             // margin: " 1rem  auto !important ",
-            justifyContent: "space-between",
+            justifyContent: "space-around",
           }}
         >
           <Grid item md={2}>
@@ -55,6 +59,8 @@ export default function Footer() {
               <li>One Person Company</li>
               <li>Proprietorship Firm</li>
               <li>TRADEMARK & COPYRIGHT</li>
+              <li>Partnership Firm</li>
+              <li>LLP (Limited Liablity partnership)</li>
             </ul>
           </Grid>
           <Grid item md={2}>
@@ -64,12 +70,13 @@ export default function Footer() {
               <li>Trademark Objection</li>
               <li>Trademark Assignment</li>
               <li>Trademark Renewal</li>
-
               <li>Copyright Registration</li>
+              <li>Response to objection</li>
+              <li>Trademark Renewal </li>
             </ul>
           </Grid>
 
-          <Grid item md={2}>
+          {/* <Grid item md={2}>
             <h3>LEGAL DOCUMENTATION</h3>
             <ul className="footer_quick_links_wrapper">
               <li>Founders Agreement</li>
@@ -77,7 +84,7 @@ export default function Footer() {
               <li>Shareholders Agreement</li>
               <li>Share Purchase Agreement</li>
             </ul>
-          </Grid>
+          </Grid> */}
 
           <Grid item md={2}>
             <h3>LEGAL DOCUMENTATION</h3>
@@ -85,7 +92,11 @@ export default function Footer() {
               <li>Founders Agreement</li>
               <li>Term Sheet</li>
               <li>Shareholders Agreement</li>
-              <li>Share Purchase Agreement</li>
+              <li>Leave and License agreement (Registered / Notarized)</li>
+              <li>Agreement to Sale</li>
+              <li>Sale Deed / Deed of Assignment</li>
+              <li>Registered Mortgage Deed</li>
+              <li>Memorandum of Understanding</li>
             </ul>
           </Grid>
         </Grid>
@@ -104,7 +115,7 @@ export default function Footer() {
             marginTop: "10px",
           }}
         >
-          © 2023 CTax, All Rights Reserved. 
+          © 2023 CTax, All Rights Reserved.
         </Typography>
       </Grid>
     </div>
