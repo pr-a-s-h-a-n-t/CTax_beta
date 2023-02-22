@@ -4,7 +4,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
 import {
+  Avatar,
+  Tooltip,
   AppBar,
   MenuItem,
   Button,
@@ -28,7 +32,7 @@ const pages = [
   "Tax",
   "GST",
 ];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 // ------Mui exapand icon start ------
 const ExpandMore = styled((props) => {
@@ -145,12 +149,15 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <div className=""  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent:"center",
-                    alignItems: "center",
-                  }}>
+              <div
+                className=""
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
@@ -164,30 +171,32 @@ function ResponsiveAppBar() {
                 >
                   {page}
                 </Button>
-                <div
-                >
+                <div>
                   <ExpandMore
                     expand={expanded}
-                    onClick={handleExpandClick }
+                    onClick={handleExpandClick}
                     aria-expanded={expanded}
                     aria-label="show more"
                   >
                     <ExpandMoreIcon />
                   </ExpandMore>
                 </div>
-                <Grid container sx={{
-                  position: 'absolute',
-                  // zIndex:"-1",
-                  top: '5rem',
-                  left: '9rem',
-                  backgroundColor: '#fff',
-                  width: '260px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  border: '0 0 1rem 0 solid', 
-                  // borderRadius: '1rem',
-                }}>
-                  {  page === "Business Registration" ? (
+                <Grid
+                  container
+                  sx={{
+                    position: "absolute",
+                    // zIndex:"-1",
+                    top: "5rem",
+                    left: "9rem",
+                    backgroundColor: "#fff",
+                    width: "260px",
+                    display: "flex",
+                    flexDirection: "column",
+                    border: "0 0 1rem 0 solid",
+                    // borderRadius: '1rem',
+                  }}
+                >
+                  {page === "Business Registration" ? (
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
                       <ul className="footer_quick_links_wrapper">
                         <li>Private Limited Company</li>
@@ -206,36 +215,11 @@ function ResponsiveAppBar() {
               </div>
             ))}
           </Box>
-          {/* <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", fontWeight: "bold",
-                fontSize:"1.12rem",  display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box> */}
-          {/* 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", fontWeight: "bold",
-                fontSize:"1.12rem",  display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box> */}
 
-          {/* <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <AccountCircleIcon />
               </IconButton>
             </Tooltip>
             <Menu
@@ -260,7 +244,7 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box> */}
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
