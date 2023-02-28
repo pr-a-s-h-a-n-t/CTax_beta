@@ -220,54 +220,8 @@ function ResponsiveAppBar() {
                         <li>LLP (Limited Liablity partnership)</li>
                       </ul>
                     </Collapse>
-                  ) : page === "Compliance" ? (
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
-                      <ul className="footer_quick_links_wrapper">
-                        <li>Private Limited Company</li>
-                        <li>Limited Liability Partnership</li>
-                        <li>One Person Company</li>
-                        <li>Proprietorship Firm</li>
-                        <li>TRADEMARK & COPYRIGHT</li>
-                        <li>Partnership Firm</li>
-                        <li>LLP (Limited Liablity partnership)</li>
-                      </ul>
-                    </Collapse>
-                  ) : page === "Trademark" ? (
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
-                      <ul className="footer_quick_links_wrapper">
-                        <li>Private Limited Company</li>
-                        <li>Limited Liability Partnership</li>
-                        <li>One Person Company</li>
-                        <li>Proprietorship Firm</li>
-                        <li>TRADEMARK & COPYRIGHT</li>
-                        <li>Partnership Firm</li>
-                        <li>LLP (Limited Liablity partnership)</li>
-                      </ul>
-                    </Collapse>
-                  ) : page === "Tax" ? (
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
-                      <ul className="footer_quick_links_wrapper">
-                        <li>Private Limited Company</li>
-                        <li>Limited Liability Partnership</li>
-                        <li>One Person Company</li>
-                        <li>Proprietorship Firm</li>
-                        <li>TRADEMARK & COPYRIGHT</li>
-                        <li>Partnership Firm</li>
-                        <li>LLP (Limited Liablity partnership)</li>
-                      </ul>
-                    </Collapse>
-                  ) : page === "GST" ? (
-                    <Collapse in={expanded} timeout="auto" unmountOnExit>
-                      <ul className="footer_quick_links_wrapper">
-                        <li>Private Limited Company</li>
-                        <li>Limited Liability Partnership</li>
-                        <li>One Person Company</li>
-                        <li>Proprietorship Firm</li>
-                        <li>TRADEMARK & COPYRIGHT</li>
-                        <li>Partnership Firm</li>
-                        <li>LLP (Limited Liablity partnership)</li>
-                      </ul>
-                    </Collapse>
+                   
+                  
                   ) : (
                     ""
                   )}
